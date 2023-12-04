@@ -1,4 +1,5 @@
 // consideriamolo alla stregua di un'interface
+// modificato
 export type Articolo = {
   id: number;
   userId: number;
@@ -6,5 +7,3 @@ export type Articolo = {
   published: boolean;
   text: string;
 }
-
-
