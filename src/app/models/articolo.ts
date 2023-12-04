@@ -7,3 +7,14 @@ export type Articolo = {
   published: boolean;
   text: string;
 }
+
+export class NuovoArticoloDto {
+  constructor(
+    public userId: number,
+    public title: string = "",
+    public published: boolean = false,
+    public text: string = ""
+  ) {
+
+  }
+}

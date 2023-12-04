@@ -1,0 +1,26 @@
+<h1>Nuovo articolo</h1>
+<form #laForm="ngForm" class="auth" (ngSubmit)="aggiungiArticolo()">
+  <mat-form-field appearance="fill">
+    <mat-label>Titolo</mat-label>
+    <input
+      matInput
+      type="text"
+      name="title"
+      [(ngModel)]="model.title"
+      placeholder="Titolo..."
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Testo</mat-label>
+    <textarea
+      matInput
+      name="text"
+      [(ngModel)]="model.text"
+      placeholder="Testo..."
+    ></textarea>
+  </mat-form-field>
+  <mat-checkbox name="published" [(ngModel)]="model.published">
+    Pubblicato
+  </mat-checkbox>
+  <button mat-raised-button color="primary" type="submit">Aggiungi</button>
+</form>
