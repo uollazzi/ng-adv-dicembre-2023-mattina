@@ -10,6 +10,7 @@ import { Articolo } from '../../models/articolo';
 export class ArticoliListComponent implements OnInit {
   titolo = "articoli";
   oggi = 1701685389;
+  articoloFinto: Articolo = { id: 1, published: true, title: "", text: "", userId: 1 };
 
   articoli: Articolo[] = [];
 
@@ -22,4 +23,13 @@ export class ArticoliListComponent implements OnInit {
       .subscribe(dati => this.articoli = dati);
   }
 
+  elimina(id: number) {
+    this.bs.deleteArticoloById(id)
+      .subscribe(dati => {
+
+        this.bs.getArticoli()
+          .subscribe(dati => this.articoli = dati);
+
+      })
+  }
 }

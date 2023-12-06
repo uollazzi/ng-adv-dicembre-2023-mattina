@@ -1,0 +1,15 @@
+<!-- <div *ngIf="articolo">
+  Esiste l'articolo: potrei averlo creato io come componente, oppure potrebbe
+  essermi stato passato come Input. Fatto sta che esiste.
+</div>
+
+<div *ngIf="!articolo">Non esiste l'articolo.</div> -->
+<mat-card *ngIf="articolo">
+  <mat-card-content>
+    {{ articolo.title | uppercase }}
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button [routerLink]="['/blog', articolo.id]">Val al dettaglio</a>
+    <button mat-button color="warn" (click)="elimina()">Elimina</button>
+  </mat-card-actions>
+</mat-card>

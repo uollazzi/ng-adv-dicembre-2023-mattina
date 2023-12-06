@@ -1,9 +1,16 @@
 <!-- {{ titolo | uppercase }}
 <hr />
 {{ oggi | date | uppercase }} -->
-<pre>
+<!-- <pre>
   {{ articoli | json }}
-</pre>
+</pre> -->
+
+<app-articolo-preview
+  *ngFor="let a of articoli"
+  [articolo]="a"
+  (onRichiestaEliminazione)="elimina($event)"
+></app-articolo-preview>
+
 <a mat-raised-button color="accent" routerLink="/blog/nuovo"
   >Scrivi nuovo articolo</a
 >

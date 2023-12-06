@@ -20,13 +20,17 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatSelectModule } from "@angular/material/select";
 import { ArticoliListComponent } from './components/articoli-list/articoli-list.component';
 import { ArticoloAddComponent } from './components/articolo-add/articolo-add.component';
+import { ArticoloPreviewComponent } from './components/articolo-preview/articolo-preview.component';
+import { ArticoloDetailComponent } from './components/articolo-detail/articolo-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ArticoliListComponent,
-    ArticoloAddComponent
+    ArticoloAddComponent,
+    ArticoloPreviewComponent,
+    ArticoloDetailComponent
   ],
   imports: [
     BrowserModule,
