@@ -1,0 +1,31 @@
+<!-- <mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <mat-toolbar color="accent">
+      <a mat-flat-button color="accent" [routerLink]="['/blog']">
+        <mat-icon>list</mat-icon>
+        Articoli
+      </a>
+      <a mat-flat-button color="accent" [routerLink]="['/blog', 'nuovo']">
+        <mat-icon>add_box</mat-icon>
+        Nuovo Articolo
+      </a>
+    </mat-toolbar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container> -->
+
+<mat-toolbar color="accent">
+  <a mat-flat-button color="accent" [routerLink]="['/blog']">
+    <mat-icon>list</mat-icon>
+    Articoli
+  </a>
+  <a mat-flat-button color="accent" [routerLink]="['/blog', 'nuovo']">
+    <mat-icon>add_box</mat-icon>
+    Nuovo Articolo
+  </a>
+</mat-toolbar>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
