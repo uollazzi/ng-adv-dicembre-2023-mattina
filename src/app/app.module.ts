@@ -27,6 +27,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { PokemonsComponent } from './components/pokemons/pokemons.component';
 import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.component';
 import { PokemonsDetailComponent } from './components/pokemons-detail/pokemons-detail.component';
+import { PokemonsAttackComponent } from './components/pokemons-attack/pokemons-attack.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PokemonsDetailComponent } from './components/pokemons-detail/pokemons-d
     BlogComponent,
     PokemonsComponent,
     PokemonsListComponent,
-    PokemonsDetailComponent
+    PokemonsDetailComponent,
+    PokemonsAttackComponent
   ],
   imports: [
     BrowserModule,

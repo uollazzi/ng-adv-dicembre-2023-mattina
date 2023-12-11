@@ -1,12 +1,16 @@
-export interface Root {
-  data: Daum[]
+export interface SearchResponse {
+  data: Pokemon[]
   page: number
   pageSize: number
   count: number
   totalCount: number
 }
 
-export interface Daum {
+export interface CardResponse {
+  data: Pokemon
+}
+
+export interface Pokemon {
   id: string
   name: string
   supertype: string

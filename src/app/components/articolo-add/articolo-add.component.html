@@ -19,8 +19,19 @@
       placeholder="Testo..."
     ></textarea>
   </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Pokemon</mat-label>
+    <mat-select name="pokemonId" [(ngModel)]="model.pokemonId">
+      <mat-option *ngFor="let p of pokemons" [value]="p.id"
+        >{{ p.name }} - {{ p.subtypes[0] }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
   <mat-checkbox name="published" [(ngModel)]="model.published">
     Pubblicato
   </mat-checkbox>
   <button mat-raised-button color="primary" type="submit">Aggiungi</button>
 </form>
+<pre>
+  {{ model | json }}
+</pre>

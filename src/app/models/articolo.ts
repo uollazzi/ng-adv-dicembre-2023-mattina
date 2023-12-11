@@ -6,6 +6,7 @@ export type Articolo = {
   title: string;
   published: boolean;
   text: string;
+  pokemonId: string;
 }
 
 export class NuovoArticoloDto {
@@ -13,7 +14,8 @@ export class NuovoArticoloDto {
     public userId: number,
     public title: string = "",
     public published: boolean = false,
-    public text: string = ""
+    public text: string = "",
+    public pokemonId: string = ""
   ) {
 
   }

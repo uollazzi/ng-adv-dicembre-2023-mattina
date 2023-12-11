@@ -9,4 +9,12 @@
       {{ articolo.text }}
     </p>
   </mat-card-content>
+  <mat-card-actions>
+    <a
+      mat-button
+      *ngIf="articolo.pokemonId"
+      [routerLink]="['/pokemons', articolo.pokemonId]"
+      >Vai al pokemon</a
+    >
+  </mat-card-actions>
 </mat-card>

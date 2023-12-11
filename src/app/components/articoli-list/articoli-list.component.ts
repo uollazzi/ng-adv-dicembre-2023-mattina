@@ -10,7 +10,7 @@ import { Articolo } from '../../models/articolo';
 export class ArticoliListComponent implements OnInit {
   titolo = "articoli";
   oggi = 1701685389;
-  articoloFinto: Articolo = { id: 1, published: true, title: "", text: "", userId: 1 };
+  articoloFinto: Articolo = { id: 1, published: true, title: "", text: "", userId: 1, pokemonId: "" };
 
   articoli: Articolo[] = [];
 
