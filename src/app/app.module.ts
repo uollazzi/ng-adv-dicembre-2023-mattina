@@ -28,6 +28,8 @@ import { PokemonsComponent } from './components/pokemons/pokemons.component';
 import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.component';
 import { PokemonsDetailComponent } from './components/pokemons-detail/pokemons-detail.component';
 import { PokemonsAttackComponent } from './components/pokemons-attack/pokemons-attack.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { PokemonsAttackComponent } from './components/pokemons-attack/pokemons-a
     PokemonsComponent,
     PokemonsListComponent,
     PokemonsDetailComponent,
-    PokemonsAttackComponent
+    PokemonsAttackComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

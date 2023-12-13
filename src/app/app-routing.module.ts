@@ -7,6 +7,8 @@ import { BlogComponent } from './components/blog/blog.component';
 import { PokemonsComponent } from './components/pokemons/pokemons.component';
 import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.component';
 import { PokemonsDetailComponent } from './components/pokemons-detail/pokemons-detail.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   // {
@@ -18,7 +20,12 @@ const routes: Routes = [
   // {
   //   path: "blog/:id", component: ArticoloDetailComponent
   // },
-
+  {
+    path: "login", component: LoginComponent
+  },
+  {
+    path: "register", component: RegisterComponent
+  },
   {
     path: "blog", component: BlogComponent,
     children: [
