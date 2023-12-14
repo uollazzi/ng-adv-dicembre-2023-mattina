@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ILoginDto, LoginDto } from '../../models/auth';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,9 @@ export class LoginComponent {
 
   login() {
     this.authService.login(this.model)
+      .pipe(
+
+    )
       .subscribe(loggedUser => {
         this.authService.setLoggedUser(loggedUser);
         this.router.navigate([""]);

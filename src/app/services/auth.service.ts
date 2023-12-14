@@ -22,4 +22,29 @@ export class AuthService {
   setLoggedUser(user: LoggedUser) {
     localStorage.setItem("user", JSON.stringify(user));
   }
+
+  getLoggedUser(): LoggedUser | null {
+    let userStorage = localStorage.getItem("user");
+
+    if (userStorage != null) {
+      let u: LoggedUser = JSON.parse(userStorage);
+      return u;
+    }
+
+    return null;
+  }
+
+  get isUserLogged(): boolean {
+    // if (this.getLoggedUser != null) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+
+    return this.getLoggedUser() != null;
+  }
+
+  logout() {
+    localStorage.removeItem("user");
+  }
 }

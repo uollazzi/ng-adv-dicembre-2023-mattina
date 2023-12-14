@@ -1,5 +1,10 @@
 <h1>Nuovo articolo</h1>
-<form #laForm="ngForm" class="auth" (ngSubmit)="aggiungiArticolo()">
+<form
+  #laForm="ngForm"
+  class="auth"
+  (ngSubmit)="aggiungiArticolo()"
+  *ngIf="model"
+>
   <mat-form-field appearance="fill">
     <mat-label>Titolo</mat-label>
     <input

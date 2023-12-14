@@ -21,6 +21,11 @@ export class ArticoliListComponent implements OnInit {
   ngOnInit(): void {
     this.bs.getArticoli()
       .subscribe(dati => this.articoli = dati);
+
+    let p = fetch("http://localhost:3000/articoli");
+
+    p.then(() => { }).catch(err => { })
+
   }
 
   elimina(id: number) {
