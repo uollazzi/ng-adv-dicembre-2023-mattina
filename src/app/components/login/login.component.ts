@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ILoginDto, LoginDto } from '../../models/auth';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
-import { catchError, of } from 'rxjs';
+import { catchError, of, switchMap, tap } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
@@ -20,16 +20,16 @@ export class LoginComponent {
   login() {
     this.authService.login(this.model)
       .pipe(
+        tap(dati => console.log("COMPONENTE", dati)),
         catchError((err: HttpErrorResponse) => {
           this.errorMessage = err.error;
           return of(undefined);
-        })
+        }),
       )
       .subscribe(loggedUser => {
         console.log("SUBSCRIBE");
 
         if (loggedUser) {
-          this.authService.setLoggedUser(loggedUser);
           this.router.navigate([""]);
         }
       });

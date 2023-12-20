@@ -17,4 +17,8 @@ export class PokemonsListComponent implements OnInit {
       .subscribe(dati => this.pokemons = dati.data);
   }
 
+  cattura(pokemon: Pokemon) {
+    this.ps.cattura(pokemon)
+      .subscribe(p => console.log(p));
+  }
 }

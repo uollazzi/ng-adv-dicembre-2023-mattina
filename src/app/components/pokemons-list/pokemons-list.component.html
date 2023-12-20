@@ -1,3 +1,8 @@
-<a *ngFor="let p of pokemons" [routerLink]="['/pokemons', p.id]">
-  <img [src]="p.images.small" />
-</a>
+<div *ngFor="let p of pokemons">
+  <a [routerLink]="['/pokemons', p.id]">
+    <img [src]="p.images.small" />
+  </a>
+  <button mat-raised-button color="primary" (click)="cattura(p)">
+    Cattura
+  </button>
+</div>

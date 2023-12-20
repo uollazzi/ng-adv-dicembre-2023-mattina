@@ -1,3 +1,18 @@
+export class NuovoPokemonCatturatoDto {
+  constructor(
+    public userId: number,
+    public pokemon: Pokemon
+  ) {
+
+  }
+}
+
+export interface PokemonCatturato {
+  id: number;
+  userId: number;
+  pokemon: Pokemon;
+}
+
 export interface SearchResponse {
   data: Pokemon[]
   page: number

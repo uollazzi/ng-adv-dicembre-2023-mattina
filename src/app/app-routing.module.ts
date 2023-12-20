@@ -9,6 +9,7 @@ import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.
 import { PokemonsDetailComponent } from './components/pokemons-detail/pokemons-detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { PokemonsCatturatiComponent } from './components/pokemons-catturati/pokemons-catturati.component';
 
 const routes: Routes = [
   // {
@@ -45,6 +46,9 @@ const routes: Routes = [
     children: [
       {
         path: "", component: PokemonsListComponent
+      },
+      {
+        path: "catturati", component: PokemonsCatturatiComponent
       },
       {
         path: ":codice", component: PokemonsDetailComponent
