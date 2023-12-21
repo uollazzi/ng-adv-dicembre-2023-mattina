@@ -19,6 +19,8 @@ import { MatInputModule } from "@angular/material/input";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatSelectModule } from "@angular/material/select";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from "@angular/material/snack-bar";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { ArticoliListComponent } from './components/articoli-list/articoli-list.component';
 import { ArticoloAddComponent } from './components/articolo-add/articolo-add.component';
 import { ArticoloPreviewComponent } from './components/articolo-preview/articolo-preview.component';
@@ -64,9 +66,15 @@ import { PokemonsCatturatiComponent } from './components/pokemons-catturati/poke
     MatInputModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 3000, horizontalPosition: "right" }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

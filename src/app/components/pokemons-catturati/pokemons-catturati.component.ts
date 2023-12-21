@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonsService } from '../../services/pokemons.service';
 import { Pokemon } from '../../models/pokemon';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-pokemons-catturati',

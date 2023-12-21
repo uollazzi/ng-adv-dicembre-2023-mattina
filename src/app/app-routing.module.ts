@@ -10,6 +10,7 @@ import { PokemonsDetailComponent } from './components/pokemons-detail/pokemons-d
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PokemonsCatturatiComponent } from './components/pokemons-catturati/pokemons-catturati.component';
+import { loggedGuard } from './guards/logged.guard';
 
 const routes: Routes = [
   // {
@@ -34,7 +35,7 @@ const routes: Routes = [
         path: "", component: ArticoliListComponent
       },
       {
-        path: "nuovo", component: ArticoloAddComponent
+        path: "nuovo", component: ArticoloAddComponent, canActivate: [loggedGuard]
       },
       {
         path: ":id", component: ArticoloDetailComponent
@@ -48,7 +49,7 @@ const routes: Routes = [
         path: "", component: PokemonsListComponent
       },
       {
-        path: "catturati", component: PokemonsCatturatiComponent
+        path: "catturati", component: PokemonsCatturatiComponent, canActivate: [loggedGuard]
       },
       {
         path: ":codice", component: PokemonsDetailComponent

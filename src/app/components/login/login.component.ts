@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ILoginDto, LoginDto } from '../../models/auth';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { catchError, of, switchMap, tap } from 'rxjs';
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -14,8 +14,8 @@ export class LoginComponent {
   model = new LoginDto();
   // model: ILoginDto = { email: "", password: "" }
   errorMessage = "";
-
-  constructor(private authService: AuthService, private router: Router) { }
+  authService = inject(AuthService);
+  router = inject(Router);
 
   login() {
     this.authService.login(this.model)
